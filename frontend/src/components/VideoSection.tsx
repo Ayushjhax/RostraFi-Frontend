@@ -7,13 +7,13 @@ export const VideoSection = () => {
 
   useEffect(() => {
     // Check if video has been played before using a flag in memory
-    const videoPlayedFlag = window.videoHasPlayed || false;
+    const videoPlayedFlag = (window as any).videoHasPlayed || false;
     
     if (videoPlayedFlag) {
       setHasPlayedOnce(true);
     } else {
       // Mark that video will play for the first time
-      window.videoHasPlayed = true;
+      (window as any).videoHasPlayed = true;
     }
   }, []);
 
