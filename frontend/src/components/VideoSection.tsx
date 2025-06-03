@@ -1,7 +1,26 @@
 "use client";
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 export const VideoSection = () => {
+  const [hasPlayedOnce, setHasPlayedOnce] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Check if video has been played before using a flag in memory
+    const videoPlayedFlag = window.videoHasPlayed || false;
+    
+    if (videoPlayedFlag) {
+      setHasPlayedOnce(true);
+    } else {
+      // Mark that video will play for the first time
+      window.videoHasPlayed = true;
+    }
+  }, []);
+
+  const handleVideoEnd = () => {
+    setHasPlayedOnce(true);
+  };
+
   return (
     <>
       <div className="min-h-screen flex items-center justify-center p-8 pb-32 bg-transparent">
@@ -16,12 +35,14 @@ export const VideoSection = () => {
           {/* Video container */}
           <div className="relative aspect-video rounded-[2.5rem] overflow-hidden">
             <div className="rounded-[2.5rem]">
-              {/* Video - removed muted attribute to enable sound */}
+              {/* Video - only autoplay if hasn't played once */}
               <video
-                autoPlay
-                loop
+                ref={videoRef}
+                autoPlay={!hasPlayedOnce}
+                loop={false}
                 className="w-full h-full object-cover rounded-[2.5rem]"
                 controls
+                onEnded={handleVideoEnd}
               >
                 <source src="https://res.cloudinary.com/djohjwkn6/video/upload/v1741290976/RostraFi_pvn5pk.mp4" />
                 Your browser does not support the video tag.

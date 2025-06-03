@@ -1,25 +1,44 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { BackgroundContent } from "@/components/background-content";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Bell, Sparkles } from "lucide-react";
-import { useState } from "react";
+import { motion } from "framer-motion"
+import { BackgroundContent } from "@/components/background-content"
+import { Button } from "@/components/ui/button"
+import { Sparkles, ArrowLeft } from "lucide-react"
+import { useState } from "react"
+import Link from "next/link"
 
 export default function ComingSoonPage() {
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [email, setEmail] = useState("")
+  const [isSubscribed, setIsSubscribed] = useState(false)
 
   const handleNotifyMe = () => {
     if (email) {
-      setIsSubscribed(true);
-      setTimeout(() => setIsSubscribed(false), 3000);
+      setIsSubscribed(true)
+      setTimeout(() => setIsSubscribed(false), 3000)
     }
-  };
+  }
 
   return (
     <div className="relative min-h-screen overflow-hidden">
+      {/* Go Back to Home Button */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="absolute top-6 left-6 z-20"
+      >
+        <Link href="/">
+          <Button
+            variant="outline"
+            size="sm"
+            className="bg-black/80 backdrop-blur-sm border-gray-700 text-white hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Go back to home
+          </Button>
+        </Link>
+      </motion.div>
+
       {/* Blurred Background */}
       <div className="absolute inset-0 scale-110 blur-sm opacity-30">
         <BackgroundContent />
@@ -155,9 +174,7 @@ export default function ComingSoonPage() {
             transition={{ duration: 0.8, delay: 1 }}
             className="absolute bottom-8 left-1/2 -translate-x-1/2"
           >
-            <p className="text-gray-600 text-sm font-light">
-              Designed with obsessive attention to detail
-            </p>
+            <p className="text-gray-600 text-sm font-light">Designed with obsessive attention to detail</p>
           </motion.div>
         </div>
       </div>
@@ -185,5 +202,5 @@ export default function ComingSoonPage() {
         ))}
       </div>
     </div>
-  );
+  )
 }
