@@ -185,7 +185,7 @@ export function TabsDemo(): JSX.Element {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-8 text-2xl md:text-5xl font-bold text-white bg-gradient-to-br from-gray-900 via-yellow-900 to-black">
           <AnimatedContent
-            title="Web3 Warfare"
+            title="Solana Warfare"
             icon={Coins}
             features={[
               {
@@ -278,7 +278,7 @@ export function TabsDemo(): JSX.Element {
           Build Your Influencer Empire
         </h1>
         <p className="text-xl text-gray-300 mt-2">
-          Draft. Strategize. Conquer. Win SOL prizes daily in the ultimate Web3
+          Draft. Strategize. Conquer. Win SOL prizes daily in the ultimate Solana
           showdown
         </p>
       </div>

@@ -197,7 +197,7 @@ export default function Home() {
               Draft. Strategize. Conquer.
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Win SOL prizes daily in the ultimate Web3 showdown. Build your dream team and dominate the leaderboard.
+              Win SOL prizes daily in the ultimate Solana showdown. Build your dream team and dominate the leaderboard.
             </p>
           </motion.div>
 

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "RostaFi - Draft Your Dream Team",
-  description: "Win SOL prizes daily in the ultimate Web3 showdown",
+  description: "Win SOL prizes daily in the ultimate Solana showdown",
 }
 
 export default function RootLayout({
