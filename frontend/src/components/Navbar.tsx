@@ -78,7 +78,7 @@ function Navbar({ className }: { className?: string }) {
         {/* Betting Menu Item */}
         <MenuItem setActive={setActive} active={active} item="Betting">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="http://localhost:3000/bettings">Bettings</HoveredLink>
+            <HoveredLink href="/bettings">Bettings</HoveredLink>
             {/* Disabled items */}
             <div className="text-gray-500 cursor-not-allowed">Upcoming Matches</div>
             <div className="text-gray-500 cursor-not-allowed">Leaderboard</div>
@@ -102,7 +102,7 @@ function Navbar({ className }: { className?: string }) {
         {/* Leaderboard Menu Item */}
         <MenuItem setActive={setActive} active={active} item="Leaderboard">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="http://localhost:3000/history">Past Leaderboard</HoveredLink>
+            <HoveredLink href="/history">Past Leaderboard</HoveredLink>
             {/* Disabled items */}
             <div className="text-gray-500 cursor-not-allowed">Global Leaderboard</div>
             <div className="text-gray-500 cursor-not-allowed">Monthly Rankings</div>

@@ -279,7 +279,7 @@ export default function Home() {
     const fetchTournaments = async () => {
       try {
         const res = await fetch(
-          "http://127.0.0.1:3001/api/v1/compitition/tournaments/?active=false"
+          "https://be1.rostrafi.fun/api/v1/compitition/tournaments/?active=false"
         );
         const data = await res.json();
 
@@ -343,7 +343,7 @@ export default function Home() {
         setLeaderboardData(dummyLeaderboard);
       } else {
         const res = await fetch(
-          `http://127.0.0.1:3001/api/v1/compitition/tournaments/${tournamentId}/leaderboard`
+          `https://be1.rostrafi.fun/api/v1/compitition/tournaments/${tournamentId}/leaderboard`
         );
         const data = await res.json();
         setLeaderboardData(data);

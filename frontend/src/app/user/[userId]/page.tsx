@@ -265,7 +265,7 @@ const TeamCard = ({ team, section, tournament }: TeamCardProps) => {
 
       // Make API call to fetch Twitter data
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/userTeams/twitter/${tournamentId}/${twitterId}`
+        `https://be1.rostrafi.fun/api/v1/userTeams/twitter/${tournamentId}/${twitterId}`
       );
 
       if (!response.ok) {
@@ -1019,7 +1019,7 @@ export default function ProfilePage() {
   const fetchGameData = async (walletAddress: string) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/walletUser/${walletAddress}/games`
+        `https://be1.rostrafi.fun/api/v1/walletUser/${walletAddress}/games`
       );
       const data = await response.json();
       console.log("Game data fetched:", data);

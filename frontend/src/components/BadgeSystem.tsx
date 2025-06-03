@@ -129,7 +129,7 @@ class BadgeService {
   ): Promise<UserBadge[] | null> {
     try {
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/badges/user/${walletAddress}`
+        `https://be1.rostrafi.fun/api/v1/badges/user/${walletAddress}`
       );
       const result: UserBadgesResponse | ApiError = await response.json();
       return result.success ? (result as UserBadgesResponse).data.badges : null;
@@ -144,7 +144,7 @@ class BadgeService {
   ): Promise<{ newBadges: UserBadge[]; hasNewBadges: boolean } | null> {
     try {
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/badges/user/${walletAddress}/new`
+        `https://be1.rostrafi.fun/api/v1/badges/user/${walletAddress}/new`
       );
       const result: NewBadgesResponse | ApiError = await response.json();
       return result.success ? (result as NewBadgesResponse).data : null;
@@ -160,7 +160,7 @@ class BadgeService {
   ): Promise<boolean> {
     try {
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/badges/user/${walletAddress}/mark-viewed`,
+        `https://be1.rostrafi.fun/api/v1/badges/user/${walletAddress}/mark-viewed`,
         {
           method: "PUT",
           headers: {

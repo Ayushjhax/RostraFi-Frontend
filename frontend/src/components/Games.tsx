@@ -46,7 +46,7 @@ export default function Games() {
       try {
         // Get game data to get this level's target score
         const response = await fetch(
-          "http://127.0.0.1:3001/api/v1/games/candycrush",
+          "https://be1.rostrafi.fun/api/v1/games/candycrush",
           {
             method: "POST",
             headers: {
@@ -178,7 +178,7 @@ export default function Games() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/games/candycrush/${walletAddress}/level`,
+        `https://be1.rostrafi.fun/api/v1/games/candycrush/${walletAddress}/level`,
         {
           method: "PUT",
           headers: {

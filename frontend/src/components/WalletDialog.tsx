@@ -104,7 +104,7 @@ export const WalletDialog: React.FC<WalletDialogProps> = ({ isOpen, onClose }) =
   const updateBackendPoints = async (points: number, operation: "add" | "deduct") => {
     const walletAddress = localStorage.getItem("UserId")
     try {
-      const response = await fetch(`http://127.0.0.1:3001/api/v1/walletUser/${walletAddress}/points`, {
+      const response = await fetch(`https://be1.rostrafi.fun/api/v1/walletUser/${walletAddress}/points`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -76,7 +76,7 @@ export default function GamesPage() {
       prize: 0.15,
       players: 2,
       status: "live",
-      route: "https://battleship.empireofbits.fun/",
+      route: "https://battleship.rostrafi.fun/",
     },
     {
       id: 3,
@@ -88,7 +88,7 @@ export default function GamesPage() {
       prize: 0.12,
       players: 1,
       status: "waiting",
-      route: "https://spaceinvader.empireofbits.fun/",
+      route: "https://spaceinvader.rostrafi.fun/",
     },
     // {
     //   id: 4,
@@ -112,7 +112,7 @@ export default function GamesPage() {
       prize: 0.3,
       players: 3,
       status: "live",
-      route: "https://axes.empireofbits.fun/",
+      route: "https://axes.rostrafi.fun/",
     },
     // {
     //   id: 78,
@@ -200,7 +200,7 @@ export default function GamesPage() {
 
       // Make API call to your backend
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/walletUser/${walletAddress}/points`,
+        `https://be1.rostrafi.fun/api/v1/walletUser/${walletAddress}/points`,
         {
           method: "GET",
           headers: {
@@ -230,7 +230,7 @@ export default function GamesPage() {
   ) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/walletUser/${userId}/points`,
+        `https://be1.rostrafi.fun/api/v1/walletUser/${userId}/points`,
         {
           method: "PUT",
           headers: {
