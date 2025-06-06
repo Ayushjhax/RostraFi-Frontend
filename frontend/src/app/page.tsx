@@ -14,6 +14,7 @@ import RetroGameCompletionPopup from "@/components/GameComplitionPopup"
 import { TournamentDialog, TournamentDialogTrigger } from "@/components/TournamentModel"
 import Spline from "@splinetool/react-spline"
 import Image from "next/image"
+import MainnetButton from "@/components/MainnetButton"
 
 export default function Home() {
   const dispatch = useAppDispatch()
@@ -180,8 +181,9 @@ export default function Home() {
 
       {/* Scrollable Content */}
       <div className="relative z-10 w-full">
-        {/* Wallet Connect Button */}
-        <div className="absolute top-4 right-4 z-50">
+        {/* Wallet Connect Button with Mainnet Switch */}
+        <div className="absolute top-4 right-4 z-50 flex items-center">
+          <MainnetButton />
           <WalletConnectButton />
         </div>
 
