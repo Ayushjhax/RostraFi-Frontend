@@ -127,6 +127,8 @@ export const CelebrationDialog = ({
                 <button
                   onClick={handleClose}
                   className="absolute top-2 right-2 p-1 rounded-full hover:bg-gray-800 text-gray-400 hover:text-white transition-all duration-200 z-10"
+                  aria-label="Close dialog"
+                  title="Close"
                 >
                   <X size={20} />
                 </button>

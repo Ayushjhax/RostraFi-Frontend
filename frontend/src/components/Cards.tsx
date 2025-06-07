@@ -27,7 +27,7 @@ const PlatformCard: React.FC<PlatformCardProps> = ({
   const router = useRouter();
   const dispatch = useAppDispatch();
   const { userWalletAddress } = useAppSelector((state) => state.user);
-  console.log(tournamentData);
+  console.log(platform);
 
   const calculateTimeRemaining = () => {
     const now = new Date();
@@ -138,7 +138,7 @@ const PlatformCard: React.FC<PlatformCardProps> = ({
     dispatch(setCurrentTournament(tournamentData._id));
 
     // Navigate to the destination route
-    router.push(`${href}/${tournamentData._id}`);
+    router.push(`${platform.toLowerCase()}/${tournamentData._id}`);
   };
 
   // Determine button text and state based on tournament status and user participation

@@ -34,12 +34,14 @@ interface SelectionMap {
 }
 
 interface WobbleTeamSectionProps {
+  platform: string;
   sectionName: string;
   teamsSectionId: string;
   teams: Team[];
 }
 
 export function WobbleTeamSection({
+  platform,
   sectionName,
   teams,
   teamsSectionId,
@@ -427,7 +429,7 @@ export function WobbleTeamSection({
                       </div>
                       <div className="flex-1">
                         <span className="text-blue-400 font-medium">
-                          Visit Twitter Profile
+                          Visit {platform} Profile
                         </span>
                         <p className="text-gray-400 text-sm">
                           Check out their latest tweets
