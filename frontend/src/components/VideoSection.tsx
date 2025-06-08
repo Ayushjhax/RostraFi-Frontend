@@ -44,7 +44,7 @@ export const VideoSection = () => {
                 controls
                 onEnded={handleVideoEnd}
               >
-                <source src="https://res.cloudinary.com/djohjwkn6/video/upload/v1741290976/RostraFi_pvn5pk.mp4" />
+                <source src="https://res.cloudinary.com/djohjwkn6/video/upload/v1749411065/My_Movie_final_qhirhm.mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
