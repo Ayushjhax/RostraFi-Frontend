@@ -51,7 +51,7 @@ export default function Page() {
       try {
         setIsLoading(true);
         const res = await fetch(
-          "https://be1.rostrafi.fun//api/v1/sections/youtube"
+          "https://be1.rostrafi.fun/api/v1/sections/youtube"
         );
 
         if (!res.ok) {
