@@ -210,7 +210,7 @@ export const fetchContent = () => async (dispatch: any) => {
   try {
     dispatch(setLoading(true));
 
-    const response = await fetch("https://be1.rostrafi.fun//api/v1/content");
+    const response = await fetch("https://be1.rostrafi.fun/api/v1/content");
 
     const data = await response.json();
     console.log(data);
