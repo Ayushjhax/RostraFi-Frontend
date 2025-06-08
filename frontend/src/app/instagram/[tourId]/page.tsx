@@ -51,7 +51,7 @@ export default function Page() {
       try {
         setIsLoading(true);
         const res = await fetch(
-          "http://127.0.0.1:3001/api/v1/sections/instagram"
+          "https://be1.rostrafi.fun/api/v1/sections/instagram"
         );
 
         if (!res.ok) {
@@ -88,7 +88,7 @@ export default function Page() {
       if (!tournamentId || !userWalletAddress || !userId) return;
 
       try {
-        const requestUrl = `http://127.0.0.1:3001/api/v1/compitition/tournaments/${tournamentId}/visit`;
+        const requestUrl = `https://be1.rostrafi.fun/api/v1/compitition/tournaments/${tournamentId}/visit`;
 
         const response = await fetch(requestUrl, {
           method: "POST",
